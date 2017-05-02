@@ -5,6 +5,25 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
     <scrip src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></scrip>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+    <script>
+        $(function () {
+            var goForItClick = function () {
+                $.get({
+                    url: '/geocode',
+                    data: {'addresses' : $('.inputParams').val()},
+                    success: function (data) { 
+                        $('.results').html(JSON.stringify(data, undefined, 2));
+                    }
+                });
+            }
+
+            $('button').click(goForItClick);
+        });
+    </script>
+
+
 </head>
 
 <body>
@@ -25,23 +44,26 @@
         <div class="row">
             <div class="col-xs-6">
                 <div class="form-group">
-                    <textarea class="form-control" rows="15" placeholder="Place your addresses to geocode, one per line" ></textarea>
+                    <textarea class="form-control inputParams" rows="15" placeholder="Place your addresses to geocode, one per line"></textarea>
                 </div>
             </div>
             <div class="col-xs-6">
                 <div class="form-group">
-                    <textarea class="form-control results" rows="15" disabled placeholder="Results will be desplayed here as they come"></textarea>
+                    <pre class="form-control results" rows="15" disabled placeholder="Results will be desplayed here as they come"></pre>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-12"><button class="btn btn-primary btn-block text-center"> Go for it</button></div>
+            <div class="col-xs-12">
+                <button class="btn btn-primary btn-block text-center"> Go for it</button>
+            </div>
         </div>
     </div>
     <footer class="footer">
-      <div class="container">
-        <p class="text-muted">Made with <3 for everyone use</p>
-      </div>
+        <div class="container">
+            <p class="text-muted">Made with
+                <3 for everyone.</p>
+        </div>
     </footer>
 </body>
 

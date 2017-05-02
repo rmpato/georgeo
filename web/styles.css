@@ -6,7 +6,12 @@
     background-color: #f5f5f5;
 }
 
-.results:disabled
+.pre:disabled
 {
     cursor: default;
+}
+
+.results
+{
+    height: 22em;
 }
