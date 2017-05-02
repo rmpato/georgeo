@@ -1,6 +1,6 @@
-## Georgeo :round_pushpin:
+## :round_pushpin: Georgeo 
 :free: Geocoding service for free.  
-:point_right: Use it as a *SaaS*, from [our hosted version](https://georgeo.now.sh/)  
+:point_right: Use it as a SaaS, from [our hosted version](https://georgeo.now.sh/)  
 :point_right: Clone and run it yourself.
 <!--:point_right: Or use it through its rest API.  -->
 
