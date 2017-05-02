@@ -1,0 +1,15 @@
+{
+  "name": "giorgeo",
+  "version": "1.0.0",
+  "description": "Geocoding and other tools",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-geocoder": "^3.16.0"
+  }
+}
