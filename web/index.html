@@ -10,14 +10,14 @@
 
     <script>
         function geocode() {
+            var results = document.querySelector('.results');
+            results.innerHTML = 'Processing...'
             axios.post('/geocode', { 'addresses': document.querySelector('.inputParams').value.split('\n') })
                 .then(function (response) {
-                    console.log(response);
-                     document.querySelector('.results').innerHTML =JSON.stringify(response.data, undefined, 2);
+                    results.innerHTML = JSON.stringify(response.data, undefined, 2);
                 })
                 .catch(function (error) {
-                    console.log(error);
-                    document.querySelector('.results').innerHTML = error;
+                    results.innerHTML = error;
                 });
         }
     </script>
