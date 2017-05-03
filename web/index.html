@@ -11,7 +11,7 @@
     <script>
         $(function () {
             var goForItClick = function () {
-                $.get({
+                $.post({
                     url: '/geocode',
                     data: { 'addresses': $('.inputParams').val() },
                     success: function (data) {
