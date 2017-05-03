@@ -1,5 +1,5 @@
 ## :round_pushpin: Georgeo 
- Georgeo is a free to use geocoding service, made with [axios](https://github.com/mzabriskie/axios) and (node-geocoder)[https://github.com/nchaulet/node-geocoder], using [OpenStreetMap](http://www.openstreetmap.org) APIs.  
+ Georgeo is a free to use geocoding service, made with [axios](https://github.com/mzabriskie/axios) and [node-geocoder](https://github.com/nchaulet/node-geocoder), using [OpenStreetMap](http://www.openstreetmap.org) APIs.  
 
  You can:  
 :point_right: Use it right now, from [our hosted version](https://georgeo.now.sh/).  
