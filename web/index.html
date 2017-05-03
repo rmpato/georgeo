@@ -1,6 +1,7 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Georgeo</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -12,8 +13,8 @@
             var goForItClick = function () {
                 $.get({
                     url: '/geocode',
-                    data: {'addresses' : $('.inputParams').val()},
-                    success: function (data) { 
+                    data: { 'addresses': $('.inputParams').val() },
+                    success: function (data) {
                         $('.results').html(JSON.stringify(data, undefined, 2));
                     }
                 });
@@ -34,35 +35,36 @@
 
         <div class="row">
             <div class="col-xs-6">
-                <h3>Direcciones</h3>
+                <h3>Locations descriptions</h3>
             </div>
             <div class="col-xs-6">
-                <h3>Resultados</h3>
+                <h3>Results</h3>
             </div>
         </div>
 
         <div class="row">
             <div class="col-xs-6">
                 <div class="form-group">
-                    <textarea class="form-control inputParams" rows="15" placeholder="Place your addresses to geocode, one per line"></textarea>
+                    <textarea class="form-control inputParams" rows="15" placeholder="Place your data to geocode, one per line"></textarea>
                 </div>
             </div>
             <div class="col-xs-6">
                 <div class="form-group">
-                    <pre class="form-control results" rows="15" disabled placeholder="Results will be desplayed here as they come"></pre>
+                    <pre class="form-control results" placeholder="Results will be desplayed here as they come"></pre>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-xs-12">
-                <button class="btn btn-primary btn-block text-center"> Go for it</button>
+                <button class="btn btn-primary btn-block text-center"> Go for it. Geocode!</button>
             </div>
         </div>
     </div>
     <footer class="footer">
         <div class="container">
             <p class="text-muted">Made with
-                <3 for everyone. Also on <a href="https://github.com/rmpato/georgeo">GitHub</a> </p>
+                <3 for everyone. Also on <a href="https://github.com/rmpato/georgeo">GitHub</a>
+            </p>
         </div>
     </footer>
 </body>
