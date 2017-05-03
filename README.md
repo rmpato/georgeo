@@ -1,8 +1,10 @@
 ## :round_pushpin: Georgeo 
-:free: Geocoding service for free, made with [axios](https://github.com/mzabriskie/axios) and (node-geocoder)[https://github.com/nchaulet/node-geocoder].
-:point_right: Use it as a SaaS, from [our hosted version](https://georgeo.now.sh/)  
-:point_right: Clone and run it yourself.
-<!--:point_right: Or use it through its rest API.  -->
+ Georgeo is a free to use geocoding service, made with [axios](https://github.com/mzabriskie/axios) and (node-geocoder)[https://github.com/nchaulet/node-geocoder], using [OpenStreetMap](http://www.openstreetmap.org) APIs.  
+
+ You can:  
+:point_right: Use it right now, from [our hosted version](https://georgeo.now.sh/).  
+:point_right: Clone it and run it yourself.  
+:point_right: Or use it through its rest API.  
 
 ### API
 Just `post` an `addresses` array with addresses/locations descriptions to the `https://georgeo.now.sh/geocode` endpoint, like this one:
@@ -12,7 +14,37 @@ Just `post` an `addresses` array with addresses/locations descriptions to the `h
     addresses: ['Av Rivadavia 4260, CABA', 'Av Cordoba 1518, CABA']
 }
 ```
-Of course, as more information you provide about your locations, more precise the results become.
+And get your response:
+```
+[
+  {
+    "latitude": -34.6136774734694,
+    "longitude": -58.425575355102,
+    "country": "Argentina",
+    "city": "CABA",
+    "state": "CABA",
+    "zipcode": "C1205AAP",
+    "streetName": "Avenida Rivadavia",
+    "streetNumber": "4260",
+    "countryCode": "AR",
+    "provider": "openstreetmap"
+  },
+  {
+    "latitude": -34.5995718962963,
+    "longitude": -58.3884548037037,
+    "country": "Argentina",
+    "city": "CABA",
+    "state": "CABA",
+    "zipcode": "C1055AAS",
+    "streetName": "Avenida Córdoba",
+    "streetNumber": "1518",
+    "countryCode": "AR",
+    "provider": "openstreetmap"
+  }
+]
+```
+
+Of course: as more information you provide about your locations, more precise the results become.
 
 ### Clone and install
 
