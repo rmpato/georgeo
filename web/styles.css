@@ -6,12 +6,12 @@
     background-color: #f5f5f5;
 }
 
-.pre:disabled
-{
-    cursor: default;
-}
-
 .results
 {
-    height: 22em;
+    height: 22.4em;
+}
+
+textarea
+{
+    resize: none;
 }
