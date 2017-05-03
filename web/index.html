@@ -6,10 +6,13 @@
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
-    <scrip src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></scrip>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
     <script>
+        hljs.initHighlightingOnLoad();
+
         function geocode() {
             var results = document.querySelector('.results');
             results.innerHTML = 'Processing...'
@@ -44,18 +47,34 @@
         <div class="row">
             <div class="col-xs-6">
                 <div class="form-group">
-                    <textarea class="form-control inputParams" rows="15" placeholder="Place your data to geocode, one per line"></textarea>
+                    <textarea class="form-control inputParams" rows="10" placeholder="Place your data to geocode, one per line"></textarea>
                 </div>
             </div>
             <div class="col-xs-6">
                 <div class="form-group">
-                    <pre class="form-control results" placeholder="Results will be desplayed here as they come"></pre>
+                    <pre class="form-control results json">Results will be desplayed here as they come</pre>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-xs-12">
                 <button class="btn btn-primary btn-block text-center" onclick="geocode()"> Geocode it!</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+                <h2 class="text-center">Rest API</h2>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 text-center">
+                <p class="bigger-font">As easy as making a <strong>post</strong> request with an array of <strong>addresses</strong>, and get your data geocoded!</p>
+                <p class="bigger-font">http://georgeo.now.sh/geocode</p>
+            </div>
+            <div class="col-xs-6">
+                <pre class="javascript"><code>{
+    addresses: ['an address', 'another address', 'and so on']
+}</code></pre>
             </div>
         </div>
     </div>
