@@ -13,14 +13,14 @@ let options = { provider: 'openstreetmap' };
 let geocoder = NodeGeocoder(options);
 
 app.get('/geocode', (request, response) => {
-    let geocodeParams = request.query.addresses.split('\n');
+    let geocodeParams = request.query.addresses;
 
     geocoder.batchGeocode(geocodeParams)
         .then(results => response.json(flatResponse(results)));
 });
 
 app.post('/geocode', (request, response) => {
-    let geocodeParams = request.body.addresses.split('\n');
+    let geocodeParams = request.body.addresses;
 
     geocoder.batchGeocode(geocodeParams)
         .then(results => response.json(flatResponse(results)));
