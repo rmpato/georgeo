@@ -1,13 +1,12 @@
 ## :round_pushpin: Georgeo 
- Georgeo is a free to use geocoding service, made with [axios](https://github.com/mzabriskie/axios) and [node-geocoder](https://github.com/nchaulet/node-geocoder), using [OpenStreetMap](http://www.openstreetmap.org) APIs.  
-
- You can:  
-:point_right: Use it right now, from [our hosted version](https://georgeo.now.sh/).  
-:point_right: Clone it and run it yourself.  
-:point_right: Or use it through its rest API.  
+ Georgeo is a free to use geocoding service, made with [node-geocoder](https://github.com/nchaulet/node-geocoder), using [OpenStreetMap](http://www.openstreetmap.org) APIs.  
+  
+:point_right: You can use it right now from [it's client site](https://georgeo.now.sh/).  
+:point_right: Or use it through its [rest API](https://github.com/rmpato/georgeo/#api).  
+:point_right: Also you can [clone it](https://github.com/rmpato/georgeo/#clone-and-install) and run it on your own.  
 
 ### API
-Just `post` an `addresses` array with addresses/locations descriptions to the `https://georgeo.now.sh/geocode` endpoint, like this one:
+Just `post` an `addresses` array with locations descriptions to the `https://georgeo.now.sh/geocode` endpoint. For example:
 
 ```
 {
@@ -66,4 +65,4 @@ Finally, run it.
 npm start
 ```
 
-Then you can browse  [localhost:3000](http://localhost:3000) and start geocoding.
+And now you can browse  [localhost:3000](http://localhost:3000) and have a happy geocoding :smile:
