@@ -49,19 +49,19 @@ Of course: as more information you provide about your locations, more precise th
 
 First, clone the repo:
 
-```sh
+```bash
 git clone https://github.com/rmpato/georgeo.git
 ```
 
 Then, install it's dependencies.
 
-```sh
+```bash
 npm install
 ```
 
 Finally, run it.
 
-```sh
+```bash
 npm start
 ```
 
