@@ -8,13 +8,13 @@
 ### API
 Just `post` an `addresses` array with locations descriptions to the `https://georgeo.now.sh/geocode` endpoint. For example:
 
-```
+```javascript
 {
     "addresses": ["an address", "another address", "and so on"]
 }
 ```
 And get your response:
-```
+```javascript
 [
   {
     "latitude": -34.6136774734694,
@@ -49,19 +49,19 @@ Of course: as more information you provide about your locations, more precise th
 
 First, clone the repo:
 
-```
+```sh
 git clone https://github.com/rmpato/georgeo.git
 ```
 
 Then, install it's dependencies.
 
-```
+```sh
 npm install
 ```
 
 Finally, run it.
 
-```
+```sh
 npm start
 ```
 
