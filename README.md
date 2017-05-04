@@ -10,8 +10,8 @@
 Just `post` an `addresses` array with addresses/locations descriptions to the `https://georgeo.now.sh/geocode` endpoint, like this one:
 
 ```
-{ 
-    addresses: ['Av Rivadavia 4260, CABA', 'Av Cordoba 1518, CABA']
+{
+    "addresses": ["an address", "another address", "and so on"]
 }
 ```
 And get your response:
