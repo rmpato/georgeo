@@ -33,15 +33,7 @@ app.post('/geocode', (request, response) => {
 });
 
 function flatResponse(results, response) {
-    let geocodedResults = [];
-
-    for (let i = 0; i < results.length; i++) {
-        var element = results[i];
-
-        geocodedResults = geocodedResults.concat(element.value);
-    }
-
-    return geocodedResults;
+    return results.reduce((a, b) => a.concat(b.value), []);
 };
 
 app.listen(3000);
